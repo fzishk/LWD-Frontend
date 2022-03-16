@@ -1,15 +1,22 @@
-import Welcome from './components/welcome.js';
+import AppHeader from './components/common/header';
+import Login from './components/auth/login.js';
+import Register from './components/auth/register';
+import "antd/dist/antd.css";
+
+import { Layout } from 'antd';
+const { Header } = Layout;
+
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-        <Welcome />
-
-      </header>
-    </div>
+    <Layout className="layout">
+      <Header>
+        <AppHeader />
+      </Header>
+      <Register />
+      <Login />
+    </Layout>
   );
 }
 
